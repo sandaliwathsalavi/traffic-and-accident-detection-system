@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Traffic and Accident Detection System Architecture</title>
+  <desc id="desc">Architecture diagram showing data ingestion, AI processing, appeal prediction, and dashboard delivery.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071733"/>
+      <stop offset="100%" stop-color="#12305d"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#143463"/>
+      <stop offset="100%" stop-color="#1b457f"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 40px Inter, Arial, sans-serif; fill: #eef5ff; }
+      .label { font: 600 26px Inter, Arial, sans-serif; fill: #f3f8ff; }
+      .text { font: 400 20px Inter, Arial, sans-serif; fill: #d4e2ff; }
+      .line { stroke: #6cb0ff; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#6cb0ff" />
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)" rx="20" />
+  <text x="640" y="70" text-anchor="middle" class="title">Integrated Traffic Violation &amp; Appeal AI Architecture</text>
+
+  <rect x="70" y="140" width="250" height="160" rx="18" fill="url(#card)" stroke="#5b95dd" />
+  <text x="195" y="190" text-anchor="middle" class="label">Data Sources</text>
+  <text x="95" y="225" class="text">- CCTV Streams</text>
+  <text x="95" y="255" class="text">- Violation Images</text>
+  <text x="95" y="285" class="text">- Appeal Text Data</text>
+
+  <rect x="370" y="140" width="250" height="160" rx="18" fill="url(#card)" stroke="#5b95dd" />
+  <text x="495" y="190" text-anchor="middle" class="label">AI Processing</text>
+  <text x="395" y="225" class="text">- YOLOv8 Detection</text>
+  <text x="395" y="255" class="text">- Accident Severity</text>
+  <text x="395" y="285" class="text">- Plate Recognition</text>
+
+  <rect x="670" y="140" width="250" height="160" rx="18" fill="url(#card)" stroke="#5b95dd" />
+  <text x="795" y="190" text-anchor="middle" class="label">Appeal Intelligence</text>
+  <text x="695" y="225" class="text">- TF-IDF + NLP</text>
+  <text x="695" y="255" class="text">- ML Classifier</text>
+  <text x="695" y="285" class="text">- Rule Validation + XAI</text>
+
+  <rect x="970" y="140" width="250" height="160" rx="18" fill="url(#card)" stroke="#5b95dd" />
+  <text x="1095" y="190" text-anchor="middle" class="label">System Outputs</text>
+  <text x="995" y="225" class="text">- Alerts &amp; Reports</text>
+  <text x="995" y="255" class="text">- Appeal Decisions</text>
+  <text x="995" y="285" class="text">- Explainable Reasons</text>
+
+  <rect x="260" y="400" width="760" height="220" rx="20" fill="#0d2448" stroke="#5b95dd" />
+  <text x="640" y="450" text-anchor="middle" class="label">Integrated Platform Layer</text>
+  <text x="300" y="500" class="text">Frontend: Citizen portal, admin dashboard, timeline and reports</text>
+  <text x="300" y="535" class="text">Backend: API orchestration, model serving, violation and appeal workflows</text>
+  <text x="300" y="570" class="text">Database: Violation logs, appeal metadata, prediction results, evidence links</text>
+
+  <line x1="320" y1="220" x2="370" y2="220" class="line" />
+  <line x1="620" y1="220" x2="670" y2="220" class="line" />
+  <line x1="920" y1="220" x2="970" y2="220" class="line" />
+  <line x1="1095" y1="300" x2="890" y2="390" class="line" />
+  <line x1="195" y1="300" x2="400" y2="390" class="line" />
+</svg>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Violation and Accident Detection System | Research Project</title>
+  <meta name="description" content="Research project website for Traffic Violation and Accident Detection System.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a class="brand" href="#home">
+        <i class="fa-solid fa-road-circle-check"></i>
+        <span>Traffic and Accident Detection System</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li class="has-dropdown">
+          <a href="#scope" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Project Scope <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#literature-survey">Literature Survey</a></li>
+            <li><a href="#research-gap">Research Gap</a></li>
+            <li><a href="#problem">Research Problem & Solution</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+          </ul>
+        </li>
+        <li><a href="#milestones">Milestones</a></li>
+        <li class="has-dropdown">
+          <a href="#downloads" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">Downloads <i class="fa-solid fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#presentations">Presentations</a></li>
+          </ul>
+        </li>
+        <li><a href="#team">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-layout fade-in">
+        <div class="hero-copy">
+          
+          <h1>Traffic Violation and Accident Detection System</h1>
+          <p class="hero-text">
+            An integrated AI-powered platform for real-time violation detection, accident severity assessment, and intelligent citizen appeal prediction with transparent decision explanations.
+          </p>
+          <div class="hero-buttons">
+            <a href="#scope" class="btn btn-primary">Explore Project Scope</a>
+            <a href="#downloads" class="btn btn-outline">View Downloads</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <img src="assets/traffic violation image.png" alt="Urban traffic scene with vehicles and monitoring infrastructure">
+          <div class="floating-tag"><i class="fa-solid fa-video"></i> AI Violation Detection</div>
+          <div class="floating-tag second"><i class="fa-solid fa-scale-balanced"></i> Transparent Appeals</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scope" class="section">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-book-open"></i> Project Scope</h2>
+
+        <article class="content-block" id="literature-survey">
+          <h3 class="subheading">Literature Survey</h3>
+          <p>
+            Existing research highlights the rapid development of intelligent traffic monitoring systems using AI and computer vision. YOLO-based object detection models, particularly YOLOv5 and YOLOv8, have been widely used for real-time traffic violation detection such as helmet detection, seatbelt compliance, and red-light violations. These models achieve high accuracy and efficiency in detecting multiple objects simultaneously in dynamic environments.
+          </p>
+          <p>
+            In addition, several studies have focused on accident detection and severity prediction using video analytics and motion analysis. Deep learning approaches analyze collision patterns and vehicle behavior to classify accidents into different severity levels, helping authorities respond more effectively.
+          </p>
+          <p>
+            Recent advancements also explore Natural Language Processing (NLP) techniques in traffic systems, particularly for analyzing textual data such as user complaints and reports. Machine learning models like TF-IDF combined with classifiers have been used to extract meaningful insights from citizen-submitted data.
+          </p>
+          <p>
+            However, limited research has been conducted on integrating citizen appeal systems into traffic violation platforms. Most existing systems focus only on detection and enforcement, without providing transparency or allowing citizens to challenge or appeal violations digitally. A few studies propose rule-based appeal handling, but they lack intelligent prediction and explainability.
+          </p>
+          <p>
+            Therefore, integrating AI-driven appeal prediction with explainable decision-making remains an emerging research area.
+          </p>
+          <h4 class="minor-heading">References</h4>
+          <ol class="reference-list">
+            <li>Redmon et al., "YOLO: Real-Time Object Detection"</li>
+            <li>Jocher et al., "YOLOv5 for Traffic Monitoring"</li>
+            <li>Bochkovskiy et al., "YOLOv4: Optimal Speed and Accuracy"</li>
+            <li>Ribeiro et al., "Explainable AI for Decision Systems"</li>
+            <li>Salton &amp; Buckley, "TF-IDF in Information Retrieval"</li>
+          </ol>
+
+           <figure class="diagram-preview">
+          <img src="assets/traffic-architecture-diagram.svg" alt="Traffic and accident detection system architecture diagram">
+        </figure>
+
+        </article>
+
+        <article class="content-block" id="research-gap">
+          <h3 class="subheading">Research Gap</h3>
+          <div class="grid cards-grid gap-grid">
+            <article class="card lift-card">
+              <h3><i class="fa-solid fa-circle-info"></i> Gap 1: Lack of Transparency in Traffic Systems</h3>
+              <p>Most current traffic violation systems do not provide clear explanations for issued fines, reducing citizen trust.</p>
+            </article>
+            <article class="card lift-card">
+              <h3><i class="fa-solid fa-file-signature"></i> Gap 2: Absence of Digital Appeal Mechanisms</h3>
+              <p>Existing systems rarely support structured digital appeals, making manual processes slow and difficult to track.</p>
+            </article>
+            <article class="card lift-card">
+              <h3><i class="fa-solid fa-robot"></i> Gap 3: No Intelligent Appeal Outcome Prediction</h3>
+              <p>Authorities handle appeals manually with no AI-based decision support to predict likely outcomes.</p>
+            </article>
+            <article class="card lift-card">
+              <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Gap 4: Lack of Explainable Decision Support</h3>
+              <p>When AI is used, explanations are often missing, limiting trust and interpretability for both citizens and officers.</p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="problem" class="section section-alt">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-triangle-exclamation"></i> Research Problem & Solution</h2>
+        <div class="grid split-grid">
+          <article class="card lift-card">
+            <h3><i class="fa-solid fa-circle-exclamation"></i> Research Problem</h3>
+            <p>
+              Despite the advancements in intelligent traffic management systems, several critical limitations still exist. Most existing systems primarily focus on detecting traffic violations using computer vision techniques but lack integration with citizen-centric functionalities. These systems do not provide transparency regarding how violations are identified, leaving users unaware of the reasoning behind issued fines.
+
+Furthermore, there is a significant absence of structured digital appeal mechanisms. In many cases, citizens must rely on manual processes to challenge violations, which are time-consuming, inefficient, and lack proper tracking. This creates frustration and reduces trust in the system.
+
+Another major limitation is the lack of intelligent decision-support systems for handling appeals. Current approaches do not utilize machine learning or data-driven techniques to predict appeal outcomes. As a result, decision-making remains fully manual and inconsistent.
+
+Additionally, most AI-based traffic systems operate as black-box models without explainability. They fail to provide clear justifications for both violation detection and appeal decisions. This lack of transparency and accountability significantly affects user confidence and system reliability.
+
+Therefore, there is a clear need for an integrated system that not only detects violations accurately but also incorporates transparency, digital appeal handling, intelligent prediction, and explainable decision-making.
+            </p>
+            <ul class="feature-list">
+              <li>No automated and trackable digital appeal platform.</li>
+              <li>Appeal handling is inefficient and delayed.</li>
+              <li>No prediction mechanism for appeal outcomes.</li>
+              <li>No explainable reasoning for decisions.</li>
+            </ul>
+          </article>
+          <article class="card lift-card">
+            <h3><i class="fa-solid fa-lightbulb"></i> Proposed Solution</h3>
+            <p>
+              To address the identified gaps, this research proposes a comprehensive AI-driven traffic violation and management system integrated with a Citizen Transparency & Digital Appeal Module.
+
+The system utilizes advanced deep learning models such as YOLOv8 for real-time traffic violation detection, ensuring high accuracy under diverse environmental conditions. It also incorporates an accident detection and severity analysis module that evaluates incidents based on motion patterns and impact levels.
+
+A key innovation of this system is the introduction of a fully digital citizen appeal platform. Users can submit appeals online, track their status, and receive timely responses. The appeal module is enhanced using Natural Language Processing (NLP) techniques such as TF-IDF to analyze user-submitted text.
+
+Additionally, machine learning algorithms are employed to predict the likelihood of appeal success, providing intelligent decision support to authorities. To further enhance trust and accountability, the system integrates Explainable AI (XAI) techniques such as SHAP or LIME, which generate clear explanations for both violation detection and appeal outcomes.
+
+Overall, the proposed solution ensures improved transparency, efficiency, fairness, and user satisfaction by combining detection, analysis, prediction, and explainability into a single unified platform.
+            </p>
+            <ul class="feature-list">
+              <li>Real-time violation detection using YOLOv8.</li>
+              <li>Automated number plate recognition and accident severity analysis.</li>
+              <li>AI-powered appeal prediction using ML + NLP (TF-IDF).</li>
+              <li>Rule-based validation and XAI techniques for clarity and trust.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="objectives" class="section">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-bullseye"></i> Objectives</h2>
+        <div class="grid cards-grid">
+          <article class="card lift-card">
+            <h3><i class="fa-solid fa-helmet-safety"></i> Traffic Violation Detection</h3>
+            <p>Develop a real-time YOLOv8 system to detect helmet absence, seatbelt non-compliance, and traffic signal violations.</p>
+          </article>
+          <article class="card lift-card">
+            <h3><i class="fa-solid fa-car-burst"></i> Accident Severity Assessment</h3>
+            <p>Implement an accident analysis module to classify severity levels as minor, moderate, or severe.</p>
+          </article>
+          <article class="card lift-card">
+            <h3><i class="fa-solid fa-gavel"></i> Citizen Appeal Prediction</h3>
+            <p>Design a hybrid AI model using machine learning and NLP to predict appeal outcomes.</p>
+          </article>
+          <article class="card lift-card">
+            <h3><i class="fa-solid fa-scale-balanced"></i> Transparency & Explainability</h3>
+            <p>Build an explainable decision module that provides clear justifications and improves accountability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methodology" class="section section-alt">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-diagram-project"></i> Methodology</h2>
+        <div class="methodology-timeline">
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-database"></i> Data Collection</h3><p>Traffic video datasets, violation images, and citizen appeal text data are collected.</p></article>
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-filter"></i> Data Preprocessing</h3><p>Image annotation, text cleaning, and TF-IDF-based feature extraction are performed.</p></article>
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-gears"></i> Model Development</h3><p>YOLOv8, accident models, and ML classifiers such as Random Forest and SVM are developed.</p></article>
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-language"></i> NLP Integration</h3><p>Appeal texts are converted to numerical vectors and classified for validity patterns.</p></article>
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-code-compare"></i> Hybrid Decision System</h3><p>ML predictions are fused with rule-based checks and XAI methods such as SHAP/LIME.</p></article>
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-layer-group"></i> System Integration</h3><p>Frontend, backend APIs, and database are connected for end-to-end workflow execution.</p></article>
+          <article class="method-step lift-card"><h3><i class="fa-solid fa-chart-line"></i> Evaluation</h3><p>Performance is measured using Accuracy, Precision, Recall, mAP, and user satisfaction.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="technologies" class="section">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-microchip"></i> Technologies Used</h2>
+        <div class="grid tech-grid">
+          <div class="chip"><i class="fa-brands fa-python tech-python"></i> Python</div>
+          <div class="chip"><i class="fa-brands fa-js tech-js"></i> JavaScript</div>
+          <div class="chip"><i class="fa-brands fa-react tech-react"></i> React</div>
+          <div class="chip"><i class="fa-solid fa-camera tech-opencv"></i> OpenCV</div>
+          <div class="chip"><i class="fa-solid fa-brain tech-dl"></i> Deep Learning</div>
+          <div class="chip"><i class="fa-solid fa-network-wired tech-tf"></i> TensorFlow</div>
+          
+          <div class="chip"><i class="fa-solid fa-car tech-yolo"></i> YOLO</div>
+          <div class="chip"><i class="fa-solid fa-server tech-api"></i> Backend API</div>
+          <div class="chip"><i class="fa-solid fa-database tech-db"></i> Database</div>
+          <div class="chip"><i class="fa-solid fa-cloud tech-cloud"></i> Cloud Deployment</div>
+          
+          <div class="chip"><i class="fa-solid fa-shield-halved tech-jwt"></i> JWT</div>
+          <div class="chip"><i class="fa-brands fa-node-js tech-node"></i> Node.js</div>
+          <div class="chip"><i class="fa-solid fa-server tech-express"></i> Express.js</div>
+          <div class="chip"><img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" class="tech-icon"> MongoDB</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="milestones" class="section section-alt">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-timeline"></i> Milestones</h2>
+        <h3>Timeline in Brief</h3>
+        <ul class="timeline-flow">
+          <li class="timeline-item fade-step">
+            <p>September 2025</p>
+            <h3>Project Proposal Presentation</h3>
+            <p>A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.</p>
+            <p><strong>Marks Allocated :</strong> 6</p>
+            <progress value="6" max="100"></progress>
+          </li>
+          <li class="timeline-item fade-step">
+            <p>September 2025</p>
+            <h3>Project Proposal Report</h3>
+            <p>A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.</p>
+            <p><strong>Marks Allocated :</strong> 6</p>
+            <progress value="6" max="100"></progress>
+          </li>
+          <li class="timeline-item fade-step">
+            <p>January2026</p>
+            <h3>Progress Presentation I</h3>
+            <p>Progress Presentation I reviews the 50% completetion status of the project. This reveals any gaps or inconsistencies in the design/requirements.</p>
+            <p><strong>Marks Allocated :</strong> 6</p>
+            <progress value="15" max="100"></progress>
+          </li>
+           <li class="timeline-item fade-step">
+            <p>March 2026</p>
+            <h3>Progress Presentation II</h3>
+            <p>Progress Presentation II reviews the 90% completetion status demonstration of the project. Along with a Poster presesntation which describes the project as a whole.</p>
+            <p><strong>Marks Allocated :</strong> 18</p>
+            <progress value="18" max="100"></progress>
+          </li>
+          <li class="timeline-item fade-step">
+            <p>May 2026</p>
+            <h3>Research Paper</h3>
+            <p>Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge</p>
+            <p><strong>Marks Allocated :</strong> 10</p>
+            <progress value="10" max="100"></progress>
+          </li>
+      
+          <li class="timeline-item fade-step">
+            <p>April-May 2026</p>
+            <h3>Website Assessment</h3>
+            <p>The Website helps to promote our research project and reveals all details related to the project.</p>
+            <p><strong>Marks Allocated :</strong> 2</p>
+            <progress value="2" max="100"></progress>
+          </li>
+          <li class="timeline-item fade-step">
+            <p>April-May 2026</p>
+            <h3>Logbook</h3>
+            <p>Status of the project is validated through the Logbook. This also includes, Status documents 1 & 2.</p>
+            <p><strong>Marks Allocated :</strong> 3</p>
+            <progress value="2" max="100"></progress>
+          </li>
+          <li class="timeline-item fade-step">
+            <p>April 2026</p>
+            <h3>Draft Final Report</h3>
+            <p>Final Report evalutes the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also Final report.</p>
+            <p><strong>Marks Allocated :</strong> 19</p>
+            <progress value="15" max="100"></progress>
+          </li>
+            <li class="timeline-item fade-step">
+            <p>May 2026</p>
+            <h3>Final Thesis</h3>
+            <p>Final Report evalutes the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also Final report.</p>
+            <p><strong>Marks Allocated :</strong> 19</p>
+            <progress value="4" max="100"></progress>
+          </li>
+          <li class="timeline-item fade-step">
+            <p>April-May 2026</p>
+            <h3>Final Presentation & Viva</h3>
+            <p>Viva is held individually to assess each members contribution to the project.</p>
+            <p><strong>Marks Allocated :</strong> 20</p>
+            <progress value="20" max="100"></progress>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="downloads" class="section section-alt">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-download"></i> Downloads</h2>
+        <h3 class="subheading" id="documents">Documents</h3>
+        <div class="grid download-grid modern-resource-grid">
+          <article class="resource-card lift-card"><h4>Topic Assessment</h4><p class="type-label group"><i class="fa-solid fa-people-group"></i> Group</p><div class="resource-actions"><span><i class="fa-solid fa-file-lines"></i> PDF</span><a href="documents/Topic Assesment form.pdf" class="btn btn-primary btn-small"><i class="fa-solid fa-download"></i> Download</a></div></article>
+          <article class="resource-card lift-card"><h4>Project Charter</h4><p class="type-label group"><i class="fa-solid fa-people-group"></i> Group</p><div class="resource-actions"><span><i class="fa-solid fa-file-lines"></i> PDF</span><a href="#" class="btn btn-primary btn-small"><i class="fa-solid fa-download"></i> Download</a></div></article>
+          
+          <article class="resource-card lift-card"><h4>Acceptance Form</h4><p class="type-label group"><i class="fa-solid fa-people-group"></i> Group</p><div class="resource-actions"><span><i class="fa-solid fa-file-lines"></i> PDF</span><a href="documents/IT4010 - Research Project - 2025-26J-174.pdf" class="btn btn-primary btn-small"><i class="fa-solid fa-download"></i> Download</a></div></article>
+          
+
+<article class="resource-card lift-card">
+  <h4>Status Documents II</h4>
+  <p class="type-label individual"><i class="fa-solid fa-user"></i> Individual</p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-file-lines"></i> PDF</span>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 1</span>
+    <a href="documents/status-document-2-member-1.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 2</span>
+    <a href="documents/status-document-2-member-2.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 3</span>
+    <a href="documents/status-document-2-member-3.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 4</span>
+    <a href="documents/status-document-2-member-4.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+</article>
+
+
+
+          
+          
+<article class="resource-card lift-card">
+  <h4>Research Paper</h4>
+
+  <p class="type-label group">
+    <i class="fa-solid fa-people-group"></i> Group
+  </p>
+
+  <p class="type-label individual">
+    <i class="fa-solid fa-user"></i> Individual
+  </p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-book-open"></i> IEEE</span>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 1</span>
+    <a href="documents/research-paper-member-1.pdf" 
+       class="btn btn-primary btn-small" 
+       download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 2</span>
+    <a href="documents/research-paper-member-2.pdf" 
+       class="btn btn-primary btn-small" 
+       download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 3</span>
+    <a href="documents/research-paper-member-3.pdf" 
+       class="btn btn-primary btn-small" 
+       download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 4</span>
+    <a href="documents/research-paper-member-4.pdf" 
+       class="btn btn-primary btn-small" 
+       download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+</article>          
+          
+          
+          <article class="resource-card lift-card"><h4>Final Report</h4><p class="type-label group"><i class="fa-solid fa-people-group"></i> Group</p><p class="type-label individual"><i class="fa-solid fa-user"></i> Individual</p><div class="resource-actions"><span><i class="fa-solid fa-file-circle-check"></i> PDF</span><a href="#" class="btn btn-primary btn-small"><i class="fa-solid fa-download"></i> Download</a></div></article>
+          
+        </div>
+
+        <h3 class="subheading" id="presentations">Presentations</h3>
+        <div class="grid download-grid modern-resource-grid">
+
+
+
+
+<article class="resource-card lift-card">
+  <h4>Project Proposal</h4>
+  <p class="type-label group">
+    <i class="fa-solid fa-people-group"></i> Group
+  </p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-file-powerpoint"></i> PDF</span>
+
+    <a href="documents/25-26J-174 Proposal-Presentation.pdf" 
+       class="btn btn-primary btn-small" 
+       download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+</article>          
+          
+          
+          
+<article class="resource-card lift-card">
+  <h4>Progress Presentation I</h4>
+  <p class="type-label group">
+    <i class="fa-solid fa-people-group"></i> Group
+  </p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-file-powerpoint"></i> PDF</span>
+
+    <a href="documents/pp1.pdf" 
+       class="btn btn-primary btn-small" 
+       target="_blank">
+      <i class="fa-solid fa-eye"></i> View
+    </a>
+  </div>
+</article>          
+          
+          
+<article class="resource-card lift-card">
+  <h4>Progress Presentation II</h4>
+  <p class="type-label group">
+    <i class="fa-solid fa-people-group"></i> Group
+  </p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-file-powerpoint"></i> PDF</span>
+
+    <a href="documents/pp2.pdf" 
+       class="btn btn-primary btn-small" 
+       target="_blank">
+      <i class="fa-solid fa-eye"></i> View
+    </a>
+  </div>
+</article>          
+          
+          
+          <article class="resource-card lift-card"><h4>Final Presentation</h4><p class="type-label individual"><i class="fa-solid fa-user"></i> Group</p><div class="resource-actions"><span><i class="fa-solid fa-file-powerpoint"></i> PPTX</span><a href="#" class="btn btn-primary btn-small"><i class="fa-solid fa-eye"></i> View</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="container fade-in">
+        <h2>About Us</h2>
+        <h3><i class="fa-solid fa-people-group"></i> Meet Our Team</h3>
+        <div class="grid team-grid">
+          <article class="member-card">
+            <img class="member-image" src="assets/dinith sir image.jpeg" alt="Supervisor profile">
+            <h3>Mr. Dinith Primal</h3>
+            <p>Supervisor</p>
+            <p>Sri Lanka Institute of Information Technology</p>
+            <p><strong>Department:</strong> Information Systems Engineering</p>
+            <div class="member-links"><a href="https://www.linkedin.com/in/dinith-primal/">Linkedin</a><a href="#">E-Mail</a></div>
+          </article>
+          
+          <article class="member-card">
+            <img class="member-image" src="https://randomuser.me/api/portraits/women/32.jpg" alt="External supervisor profile">
+            <h3>Mr K.G.P.Priyadarshana</h3>
+            <p>External-Supervisor</p>
+            <p>Officer In Charge</p>
+            <p><strong>Division:</strong> Baddegama</p>
+            <div class="member-links"><a href="#">G-Scholar</a><a href="#">E-Mail</a></div>
+          </article>
+
+           <article class="member-card">
+            <img class="member-image" src="assets/ruvindya.jpeg" alt="Group leader profile">
+            <h3>Rashmi B.G.R</h3>
+            <p>Group Member 01  Undergraduate</p>
+            <p>Sri Lanka Institute of Information Technology</p>
+            <p><strong>Department:</strong> IT</p>
+            <div class="member-links"><a href="#">Linkedin</a><a href="www.linkedin.com/in/ruvindya-rashmi-386913327">E-Mail</a></div>
+          </article>
+          
+         
+          
+          <article class="member-card">
+            <img class="member-image" src="assets/pic1.jpg" alt="Group member profile">
+            <h3>Shehara I.G.D.S</h3>
+            <p>Group Member 02 Undergraduate</p>
+            <p>Sri Lanka Institute of Information Technology</p>
+            <p><strong>Department:</strong> IT</p>
+            <div class="member-links"><a href="https://www.linkedin.com/in/sithmi-shehara-2a0173291/">Linkedin</a><a href="https://mail.google.com/mail/u/0/#inbox">E-Mail</a></div>
+          </article>
+          
+          <article class="member-card">
+            <img class="member-image" src="assets/pamod.jpeg" alt="Group member profile">
+            <h3>Pushpamal K.P.N</h3>
+            <p>Group Member 03  Undergraduate</p>
+            <p>Sri Lanka Institute of Information Technology</p>
+            <p><strong>Department:</strong> IT</p>
+            <div class="member-links"><a href="https://www.linkedin.com/in/pamod-pushpamal-3310022a9">Linkedin</a><a href="https://mail.google.com/mail/u/0/#inbox">E-Mail</a></div>
+          </article>
+
+
+
+
+          <article class="member-card">
+            <img class="member-image" src="assets/sandali.png" alt="Group member profile">
+            <h3>Wathsalavi K H S</h3>
+            <p>Group Member 04  Undergraduate</p>
+            <p>Sri Lanka Institute of Information Technology</p>
+            <p><strong>Department:</strong> IT</p>
+            <div class="member-links"><a href="www.linkedin.com/in/sandali-wathsalavi-a82713306">Linkedin</a><a href="#">E-Mail</a></div>
+          </article>
+
+          
+
+        <div class="achievement-box">
+          <h3 class="subheading"><i class="fa-solid fa-award"></i> Achievements</h3>
+          <p>Add awards, finalist recognitions, conference acceptances, or national nominations here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="app-download" class="section section-alt">
+      <div class="container fade-in cta-box">
+        <h2><i class="fa-brands fa-google-play"></i> Download Now</h2>
+        <p>Access the mobile application and explore the system architecture overview used in this research project.</p>
+       
+        <div class="store-buttons">
+          <a href="#" class="btn btn-primary"><i class="fa-brands fa-google-play"></i> Google Play</a>
+          <a href="#" class="btn btn-outline"><i class="fa-brands fa-apple"></i> App Store</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container fade-in">
+        <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+        <div class="contact-layout">
+          <form class="contact-form" action="#" method="post">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Message or Query" required></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <div class="contact-box">
+            <h3>Contact Details</h3>
+            <p><i class="fa-solid fa-location-dot"></i> SLIIT University, Kaduwela Road, Malabe,Sri Lanka</p>
+            <p><i class="fa-solid fa-phone"></i> +94 77 526 5486</p>
+            <p><i class="fa-solid fa-at"></i> <a href="mailto:researchproject2025batch@gmail.com">researchproject2025batch@gmail.com</a></p>
+            <p><i class="fa-solid fa-circle-info"></i> Thank you for visiting our research website.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Traffic Violation and Accident Detection System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

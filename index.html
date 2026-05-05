@@ -53,7 +53,7 @@
       <div class="container hero-layout fade-in">
         <div class="hero-copy">
           
-          <h1>Traffic Violation and Accident Detection System</h1>
+          <h1>Traffic and Accident Detection System</h1>
           <p class="hero-text">
             An integrated AI-powered platform for real-time violation detection, accident severity assessment, and intelligent citizen appeal prediction with transparent decision explanations.
           </p>
@@ -76,36 +76,69 @@
         <h2><i class="fa-solid fa-book-open"></i> Project Scope</h2>
 
         <article class="content-block" id="literature-survey">
-          <h3 class="subheading">Literature Survey</h3>
-          <p>
-            Existing research highlights the rapid development of intelligent traffic monitoring systems using AI and computer vision. YOLO-based object detection models, particularly YOLOv5 and YOLOv8, have been widely used for real-time traffic violation detection such as helmet detection, seatbelt compliance, and red-light violations. These models achieve high accuracy and efficiency in detecting multiple objects simultaneously in dynamic environments.
-          </p>
-          <p>
-            In addition, several studies have focused on accident detection and severity prediction using video analytics and motion analysis. Deep learning approaches analyze collision patterns and vehicle behavior to classify accidents into different severity levels, helping authorities respond more effectively.
-          </p>
-          <p>
-            Recent advancements also explore Natural Language Processing (NLP) techniques in traffic systems, particularly for analyzing textual data such as user complaints and reports. Machine learning models like TF-IDF combined with classifiers have been used to extract meaningful insights from citizen-submitted data.
-          </p>
-          <p>
-            However, limited research has been conducted on integrating citizen appeal systems into traffic violation platforms. Most existing systems focus only on detection and enforcement, without providing transparency or allowing citizens to challenge or appeal violations digitally. A few studies propose rule-based appeal handling, but they lack intelligent prediction and explainability.
-          </p>
-          <p>
-            Therefore, integrating AI-driven appeal prediction with explainable decision-making remains an emerging research area.
-          </p>
-          <h4 class="minor-heading">References</h4>
-          <ol class="reference-list">
-            <li>Redmon et al., "YOLO: Real-Time Object Detection"</li>
-            <li>Jocher et al., "YOLOv5 for Traffic Monitoring"</li>
-            <li>Bochkovskiy et al., "YOLOv4: Optimal Speed and Accuracy"</li>
-            <li>Ribeiro et al., "Explainable AI for Decision Systems"</li>
-            <li>Salton &amp; Buckley, "TF-IDF in Information Retrieval"</li>
-          </ol>
+  <h3 class="subheading">Literature Survey</h3>
 
-           <figure class="diagram-preview">
-          <img src="assets/traffic-architecture-diagram.svg" alt="Traffic and accident detection system architecture diagram">
-        </figure>
+  <p>
+    Existing research highlights the rapid development of intelligent traffic monitoring systems using artificial intelligence and computer vision. YOLO-based object detection models have been widely adopted for real-time traffic violation detection due to their ability to perform fast and accurate object localization in dynamic environments [1]. Later YOLO variants, such as YOLOv4 and YOLOv5, further improved detection speed and accuracy, making them suitable for applications such as helmet detection, seatbelt compliance monitoring, and red-light violation identification [2], [3]. These models are capable of detecting multiple objects simultaneously, which is essential in complex traffic surveillance environments.
+  </p>
 
-        </article>
+  <p>
+    In addition, several studies have focused on accident detection and severity prediction using video analytics and motion-based analysis. Deep learning approaches can analyze collision patterns, vehicle movement, and abnormal traffic behavior to classify accidents into different severity levels. Such systems support faster decision-making by assisting authorities in identifying critical incidents and prioritizing emergency responses.
+  </p>
+
+  <p>
+    Recent advancements also explore the use of Natural Language Processing (NLP) techniques in traffic management systems, particularly for analyzing textual data such as user complaints, reports, and appeal descriptions. Traditional information retrieval techniques such as TF-IDF have been widely used to represent textual data and extract meaningful features for classification tasks [5]. These methods allow machine learning models to identify important terms and patterns from citizen-submitted data.
+  </p>
+
+  <p>
+    However, limited research has been conducted on integrating citizen appeal systems into traffic violation platforms. Most existing systems focus primarily on detection and enforcement, without providing transparency or enabling citizens to challenge or appeal violations through a digital process. Explainable Artificial Intelligence (XAI) techniques have been proposed to improve the interpretability of automated decision-making systems by providing understandable explanations for model predictions [4]. Nevertheless, only a few studies have explored rule-based appeal handling, and such approaches often lack intelligent prediction capability and explainability.
+  </p>
+
+  <p>
+    Therefore, integrating AI-driven appeal prediction with explainable decision-making remains an emerging research area. Such integration can improve transparency, fairness, and accountability in intelligent traffic violation management systems.
+  </p>
+
+  <h4 class="minor-heading">References</h4>
+
+  <ol class="reference-list">
+    <li>
+      J. Redmon, S. Divvala, R. Girshick, and A. Farhadi, 
+      “You Only Look Once: Unified, Real-Time Object Detection,” 
+      in <em>Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)</em>, 
+      2016, pp. 779–788.
+    </li>
+
+    <li>
+      A. Bochkovskiy, C.-Y. Wang, and H.-Y. M. Liao, 
+      “YOLOv4: Optimal Speed and Accuracy of Object Detection,” 
+      <em>arXiv preprint arXiv:2004.10934</em>, 2020.
+    </li>
+
+    <li>
+      G. Jocher et al., 
+      “YOLOv5,” GitHub repository, 2020. 
+      [Online]. Available: https://github.com/ultralytics/yolov5
+    </li>
+
+    <li>
+      M. T. Ribeiro, S. Singh, and C. Guestrin, 
+      “Why Should I Trust You?: Explaining the Predictions of Any Classifier,” 
+      in <em>Proc. 22nd ACM SIGKDD Int. Conf. Knowledge Discovery and Data Mining</em>, 
+      2016, pp. 1135–1144.
+    </li>
+
+    <li>
+      G. Salton and C. Buckley, 
+      “Term-Weighting Approaches in Automatic Text Retrieval,” 
+      <em>Information Processing &amp; Management</em>, 
+      vol. 24, no. 5, pp. 513–523, 1988.
+    </li>
+  </ol>
+
+  <figure class="diagram-preview">
+    <img src="assets/traffic-architecture-diagram.svg" alt="Traffic and accident detection system architecture diagram">
+  </figure>
+</article>
 
         <article class="content-block" id="research-gap">
           <h3 class="subheading">Research Gap</h3>
@@ -297,13 +330,7 @@ Overall, the proposed solution ensures improved transparency, efficiency, fairne
             <p><strong>Marks Allocated :</strong> 3</p>
             <progress value="2" max="100"></progress>
           </li>
-          <li class="timeline-item fade-step">
-            <p>April 2026</p>
-            <h3>Draft Final Report</h3>
-            <p>Final Report evalutes the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also Final report.</p>
-            <p><strong>Marks Allocated :</strong> 19</p>
-            <progress value="15" max="100"></progress>
-          </li>
+         
             <li class="timeline-item fade-step">
             <p>May 2026</p>
             <h3>Final Thesis</h3>
@@ -334,7 +361,34 @@ Overall, the proposed solution ensures improved transparency, efficiency, fairne
           
 
 <article class="resource-card lift-card">
-  <h4>Status Documents II</h4>
+  <h4>Checklist Documents</h4>
+
+  <p class="type-label group">
+    <i class="fa-solid fa-people-group"></i> Group
+  </p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-link"></i> Links</span>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Checklist 1</span>
+    <a href="https://github.com/Sithmi-Shehara/Traffic-and-Accident-Detection-System" class="btn btn-primary btn-small" target="_blank">
+      <i class="fa-solid fa-up-right-from-square"></i> Open
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Checklist 2</span>
+    <a href="https://mysliit.sharepoint.com/:u:/s/CDAPSubmissionCloud/IQAYG_aiWXXFSr5j2ddbgDe4AZU2xQfsUp5vBfPTH32kPjM?e=OJT1Ct" class="btn btn-primary btn-small" target="_blank">
+      <i class="fa-solid fa-up-right-from-square"></i> Open
+    </a>
+  </div>
+</article>
+
+
+<article class="resource-card lift-card">
+  <h4>Proposal Documents</h4>
   <p class="type-label individual"><i class="fa-solid fa-user"></i> Individual</p>
 
   <div class="resource-actions">
@@ -427,9 +481,56 @@ Overall, the proposed solution ensures improved transparency, efficiency, fairne
 
 </article>          
           
+
+
           
-          <article class="resource-card lift-card"><h4>Final Report</h4><p class="type-label group"><i class="fa-solid fa-people-group"></i> Group</p><p class="type-label individual"><i class="fa-solid fa-user"></i> Individual</p><div class="resource-actions"><span><i class="fa-solid fa-file-circle-check"></i> PDF</span><a href="documents/25-26J-174 Group Thesis .pdf" class="btn btn-primary btn-small"><i class="fa-solid fa-download"></i> Download</a></div></article>
-          
+<article class="resource-card lift-card">
+  <h4>Final Reports</h4>
+   <p class="type-label group">
+    <i class="fa-solid fa-people-group"></i> Group
+  </p>
+  <p class="type-label individual"><i class="fa-solid fa-user"></i> Individual</p>
+
+  <div class="resource-actions">
+    <span><i class="fa-solid fa-file-lines"></i> PDF</span>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Group Thesis</span>
+    <a href="documents/25-26J-174 Group Thesis .pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 1</span>
+    <a href="documents/Thesis1.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 2</span>
+    <a href="documents/Thesis2.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 3</span>
+    <a href="documents/Thesis3.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+
+
+  <div class="resource-actions" style="margin-top: 0.6rem;">
+    <span>Member 4</span>
+    <a href="documents/Thesis4.pdf" class="btn btn-primary btn-small" download>
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+  </div>
+</article>          
         </div>
 
         <h3 class="subheading" id="presentations">Presentations</h3>
@@ -493,7 +594,7 @@ Overall, the proposed solution ensures improved transparency, efficiency, fairne
 </article>          
           
           
-          <article class="resource-card lift-card"><h4>Final Presentation</h4><p class="type-label individual"><i class="fa-solid fa-user"></i> Group</p><div class="resource-actions"><span><i class="fa-solid fa-file-powerpoint"></i> PPTX</span><a href="#" class="btn btn-primary btn-small"><i class="fa-solid fa-eye"></i> View</a></div></article>
+          <article class="resource-card lift-card"><h4>Final Presentation</h4><p class="type-label individual"><i class="fa-solid fa-user"></i> Group</p><div class="resource-actions"><span><i class="fa-solid fa-file-powerpoint"></i> PPTX</span><a href="documents/Final PPt.pdf" class="btn btn-primary btn-small"><i class="fa-solid fa-eye"></i> View</a></div></article>
         </div>
       </div>
     </section>
@@ -571,17 +672,7 @@ Overall, the proposed solution ensures improved transparency, efficiency, fairne
       </div>
     </section>
 
-    <section id="app-download" class="section section-alt">
-      <div class="container fade-in cta-box">
-        <h2><i class="fa-brands fa-google-play"></i> Download Now</h2>
-        <p>Access the mobile application and explore the system architecture overview used in this research project.</p>
-       
-        <div class="store-buttons">
-          <a href="#" class="btn btn-primary"><i class="fa-brands fa-google-play"></i> Google Play</a>
-          <a href="#" class="btn btn-outline"><i class="fa-brands fa-apple"></i> App Store</a>
-        </div>
-      </div>
-    </section>
+    
 
     <section id="contact" class="section section-alt">
       <div class="container fade-in">
